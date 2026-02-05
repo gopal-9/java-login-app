@@ -4,9 +4,9 @@ RUN yum install wget -y && \
     yum install tar -y && \
     yum install git -y
 RUN yum install java -y
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz && \
-    tar zxf apache-maven-3.9.12-bin.tar.gz && \
-    mv apache-maven-3.9.12 /opt/maven
+RUN wget wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.115/bin/apache-tomcat-9.0.115.tar.gz && \
+    tar zxf apache-tomcat-9.0.115.tar.gz && \
+    mv apache-tomcat-9.0.11 /opt/maven
 ENV M2_HOME /opt/maven
 
 
