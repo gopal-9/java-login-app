@@ -19,7 +19,7 @@ RUN chmod -R 700 /root/.ssh  && \
     chmod 600 /root/.ssh/id_rsa && \
     ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
 
-RUN git clone git@bitbucket.org:dptrealtime/java-login-app.git /opt/app
+RUN git clone https://github.com/gopal-9/java-login-app.git /opt/app
 WORKDIR /opt/app
 RUN /opt/maven/bin/mvn package
 
