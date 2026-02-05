@@ -1,6 +1,4 @@
 FROM amazonlinux AS build
-ENV M2_HOME /opt/maven
-RUN export PATH
 RUN yum install wget -y && \
     yum install gzip -y && \
     yum install tar -y && \
@@ -9,6 +7,8 @@ RUN yum install java -y
 RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz && \
     tar zxf apache-maven-3.9.12-bin.tar.gz && \
     mv apache-maven-3.9.12 /opt/maven
+ENV M2_HOME /opt/maven
+
 
 RUN mkdir /root/.ssh
 
